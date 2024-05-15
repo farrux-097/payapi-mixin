@@ -1,0 +1,51 @@
+.site-footer {
+    background-color: #1B262F;
+}
+
+.footer {
+    padding: 30px 0;
+    @include display;
+}   
+.footer__left {
+    @include display ($jc:start)
+}
+
+.footer-left__list {
+    margin-left: 64px;
+    display: flex;
+}
+
+.footer-list__item + .footer-list__item {
+    margin-left: 40px; 
+}
+.footer-list__link {
+    @include link ($clr:#FBFCFE);
+}
+.footer__right {
+    width: 120px;
+    @include display
+}
+
+@media(max-width:750px){
+    .footer{
+        @include display($fd:column);
+        text-align: center;
+        gap: 40px;
+    }
+
+    .footer-left{
+        @include display ($fd:column);
+        gap: 40px;
+    }
+
+    .footer-left__list{
+        @include display ($fd:column);
+        text-align: center;
+        gap: 31px;
+        margin-left: 0;
+    }
+
+    .footer-list__item + .footer-list__item{
+        margin-left: 0;
+    }
+}

@@ -1,0 +1,51 @@
+.easy {
+    padding: 150px 97px 0 0;
+    @include display
+}
+.easy__content {
+    width: 445px;
+    text-align: start;
+}
+.easy__title {
+    @include title;
+}
+.easy__text {
+    @include text;
+}
+
+@media (max-width:1024px){
+    .easy{
+        @include display ($fd:column);
+        padding: 100px 97px 0;    
+    }
+
+    .easy__content{
+        width: 100%;
+        text-align: center;
+    }
+
+    .easy__img{
+        width: 391px;
+        height: 250px;
+        margin-bottom: 48px;
+    }
+
+}
+
+
+@media (max-width:750px){
+    .easy{
+        padding: 80px 23px;
+    }
+
+    .easy__img{
+        width: 328px;
+        height: 209px;
+    }
+
+    .easy__title{
+        @include title($fs:36px,$lh:36px,$ls:-0.28px    )
+    }
+
+
+}

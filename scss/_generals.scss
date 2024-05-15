@@ -1,0 +1,22 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+}
+
+body{
+    font-family: 'DM Serif Display';
+    font-family: 'Public Sans';
+    background-image: url(../images/body-bg.png);
+    background-repeat: no-repeat;
+    background-position: top right;
+    background-color: #EDF3F8;
+}
+
+.container{
+    max-width: 1150px;
+    margin: 0 auto;
+    padding: 0 20px;
+}

@@ -1,0 +1,63 @@
+
+.header-top {
+    @include display;
+    padding-top: 40px;
+}
+.header-top__link-wrapper {
+    @include display
+}
+
+.header-top_list {
+    @include display ($jc:start);
+    margin-left: 64px;
+}
+
+.navlist__item + .navlist__item {
+    margin-left: 40px;
+}
+.navlist__link {
+    @include link 
+}
+.heaader-top__btn {
+    @include button
+}
+
+.header-top__hamburger{
+    display: none;
+}
+@media (max-width:1024px){
+    body{
+        background-image: url(../../images/body-tablet-bg.png);
+        background-position: top;
+        background-size: 100%;
+    }
+
+    .header-top_list{
+        margin-left: 120px;
+    }
+}
+
+@media (max-width:750px){
+    body{
+        background-image: url(../../images/body-mobile-bg.png);
+        background-position: top;
+        background-size: 100%;
+    }
+
+    .header-top__logo-img{
+        width: 135px;
+        height: 38px;
+    }
+
+    .header-top_list{
+        display: none;
+    }
+
+    .heaader-top__btn {
+        display: none;
+    }
+
+    .header-top__hamburger{
+        display: block;
+    }
+}

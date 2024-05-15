@@ -1,0 +1,100 @@
+.about-section {
+    background-color: #1B262F;
+    background-image: url(../images/about-bg.png);
+    background-repeat: no-repeat;
+    background-position: top left;
+}
+
+.about {
+    padding: 100px 0;
+    @include display
+}
+
+.left-content {
+    max-width: 445px;
+}
+.left-content__title {
+    @include title ($mb:24px);
+    color: #fff;
+}
+.left-content__text {
+    margin-bottom: 32px;
+    @include text ($clr: #FBFCFE);  
+    opacity: 0.7;
+}
+
+.left-content__link {
+    width: 130px;
+    padding: 10px 10px;
+    border: 2px solid #fff;
+    border-radius: 24px;
+    color: #fff;
+    font-size: 15px;
+    font-weight: 700;
+
+    &:hover{
+        color: #1B262F;
+        background-color: #fff;
+    }
+}
+
+.right-content {
+    max-width: 536px;
+    @include display;
+    flex-wrap: wrap;
+    gap: 46px;
+}
+
+@media (max-width:1024px){
+    .about-section{
+        background-image:url(../../images/about-teblet-bg.png) ;
+        background-size: 100%;
+        padding: 88px 155px;
+    }
+
+    .about{
+        @include display($fd:column-reverse);
+        padding: 0;
+        gap: 64px;
+    }
+
+    .left-content{
+        text-align: center;
+    }
+
+    .right-content{
+        width: 100%;
+    }
+    
+}
+
+@media (max-width:750px){
+    .about-section{
+        background-image: url(../../images/about-mobile-bg.png);
+        padding: 80px 24px;
+    }
+
+    .about{
+        gap: 56px;
+    }
+
+    .left-content__title {
+        @include title ($fs:32px, $lh:36px,$mb:16px,);
+        color: #fff;
+    }
+
+    .left-content{
+        width: 100%;
+    }
+
+    .right-content{
+        width: 100%;
+        gap: 40px;
+    }
+
+    .left-content__text{
+        margin-bottom: 60px;
+    }
+}
+
+

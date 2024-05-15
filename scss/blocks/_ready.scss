@@ -1,0 +1,41 @@
+.ready__list {
+    @include display;
+}
+.ready__item {
+    width: 30%;
+    @include display ($fd:column) ;
+    text-align: center;
+}
+.ready__title {
+    margin-top: 32px;
+    @include title ($ff:'Public Sans',$fs:18px,$lh:25px,$ls:-0.14px,$fw:700)
+}
+.ready__text {
+    @include text ($lh:25px,$ls:-0.12px);       
+}
+
+
+
+
+@media(max-width:1024px){
+    .ready__img{
+        width: 88px;
+        height: 88px;   
+    }
+}
+
+@media(max-width:750px){
+    .ready__list{
+        @include display ($fd:column);
+        gap: 48px;
+    }
+
+    .ready__item{
+        width: 100%;
+    }
+
+    .ready__img{
+        width: 106px;
+        height: 106px;
+    }
+}

@@ -1,0 +1,58 @@
+.simple-section {
+    background-image: url(../images/simple-bg.png);
+    background-repeat: no-repeat;
+    background-position: right;
+}
+
+.simple {
+    padding: 150px 0;
+    @include display ;
+}
+.simple__content {
+    max-width: 445px;
+}
+.simple__title {
+   @include title;
+}
+.simple__text {
+    @include text
+}
+
+
+@media (max-width:1024px){
+    .simple-section{
+        background: none;
+    }
+
+    .simple{
+        @include display ($fd:column-reverse);
+        padding: 100px 97px;
+    }
+
+    .simple__img{
+        width: 363px;
+        height: 320px;
+        margin-bottom: 48px;
+    }
+
+    .simple__content{
+        text-align: center;
+    }
+}
+
+
+@media (max-width:750px){
+    .simple{
+        padding: 80px 23px;
+    }
+
+    .simple__img{
+        width: 328px;
+        height: 290px;
+    }
+
+    .simple__title{
+        @include title ($fs:36px, $lh:36px,$ls:-0.28px)
+    }
+
+}

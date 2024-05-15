@@ -1,0 +1,92 @@
+.hero {
+    width: 100%;
+    padding: 75px 95px 75px 0;
+    @include display ;
+}
+
+.hero__content {
+    width: 550px;
+}
+.hero__title {
+    @include title ($fs:72px,$mb:21px,$ls:-0.55px,$lh:72px)
+}
+.hero__label {
+    position: relative;
+}
+.hero__input {
+    width: 450px;
+    margin-bottom: 16px;
+    padding: 15px;
+    border: 2px solid transparent;
+    border-radius: 24px;
+    box-shadow: 10px 10px 25px -10px rgba(54, 83, 107, 0.25);
+    outline: none;
+    color: var(--clr-text);
+
+    &::placeholder{
+        color: var(--clr-text);
+        opacity: 0.5;
+        font-size: 15px;
+    }
+}
+.hero__btn {
+    position: absolute;
+    margin: 0 0 0 -173px;   
+    @include button;
+    box-shadow: 10px 10px 25px -10px rgba(54, 83, 107, 0.25);
+}
+
+.hero__text{
+    margin-left: 15px;
+    @include text ($lh:17.5px)
+}
+
+.hero__link{
+    font-weight: 700;
+    font-size: 15px;
+    color: #6C8294;
+}
+
+
+@media (max-width:1024px){
+    .hero{
+        @include display ($fd:column-reverse);
+        padding: 48px 97px 100px;
+    }
+
+    .hero__content{
+        width: 573px;
+        text-align: center;
+    }
+
+    .hero__title{
+        @include title;
+        margin-top: 48px;
+    }
+}
+
+@media (max-width:750px){
+    .hero{
+        padding: 32px 0 80px;
+    }
+
+    .hero__content{
+        width: 327px;
+    }
+    
+
+    .hero__input{
+        width: 100%;
+    }
+
+    .hero__btn{
+        width: 100%;
+        position: static;
+        margin: 0 0 24px 0;
+    }
+    
+
+    .hero__title{
+        @include title ($fs:32px,$lh:36px,$ls:-0.25px)
+    }
+}
